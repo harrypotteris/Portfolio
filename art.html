@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="photographs.html">Photographs</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Art Gallery Section -->
+  <div class="gallery-container">
+    <h2>Art</h2>
+    <div class="gallery-grid" id="artGallery"></div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:charithagattu248@example.com">charithagattu248@example.com</a></p>
+    <p>College Email: <a href="mailto:b23ee1021@iitj.ac.in">b23ee1021@iitj.ac.in</a></p>
+    <p>Phone: +91 99085 91319</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/charitha-gattu" target="_blank">linkedin.com/in/charitha-gattu</a></p>
+    <p>GitHub: <a href="https://github.com/harrypotteris" target="_blank">github.com/harrypotteris</a></p>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    const artGallery = document.getElementById("artGallery");
+
+    for (let i = 1; i <= 4; i++) {
+      const artBox = document.createElement("div");
+      artBox.className = "gallery-item";
+
+      const img = document.createElement("img");
+      img.src = `images/Art/img${i}.jpg`;
+      img.alt = `Art ${i}`;
+      img.classList.add("thumbnail");
+
+      // Add click event to show in lightbox
+      img.addEventListener("click", function () {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        lightbox.style.display = "block";
+        lightboxImg.src = this.src;
+      });
+
+      artBox.appendChild(img);
+      artGallery.appendChild(artBox);
+    }
+
+    // Close lightbox
+    document.querySelector(".close").onclick = function () {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    // Close lightbox on outside click
+    window.onclick = function (event) {
+      const lightbox = document.getElementById("lightbox");
+      if (event.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
