@@ -4,9 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
+
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .blog-links {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .blog-item {
+      margin-bottom: 20px;
+      border-left: 3px solid #3498db;
+      padding-left: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      border-radius: 8px;
+      background: #f9f9f9;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    
+    .blog-item h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+      display: block;
+    }
+      
+
+    .blog-item .date {
+      font-size: 0.8rem;
+      color: #888;
+      margin: 5px 0;
+    }
+
+    /* Buttons below title/date */
+    .blog-buttons {
+      margin: 5px 0 10px 0;
+    }
+
+    .blog-buttons a {
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 5px;
+      padding: 6px 14px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .blog-buttons a:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .live-button {
+      background: #e67e22; /* orange */
+    }
+
+    .github-button {
+      background: #3498db; /* blue */
+    }
+
+    .blog-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding-left: 5px;
+    }
+
+    .blog-content img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .blog-content p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .blog-item.active .blog-content {
+      max-height: 500px;
+      padding-top: 10px;
+    }
+
+    .blog-item:hover h3 {
+      color: #3498db;
+    }
+
+  </style>
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -22,47 +123,102 @@
 
   <!-- Page Content -->
   <div class="main">
+
     <!-- Left Container -->
     <div class="container">
       <h1>Hi, I'm Charitha. Welcome to my Portfolio</h1>
       <img src="images/linkedin_cover_img.jpeg" class="container-image" alt="Charitha" />
       <p>
-        I’m a B.Tech student with a strong interest in technology, creativity, and self-expression. 
-        I enjoy exploring new ideas and taking part in projects that challenge and inspire me. 
+        I’m a B.Tech student with a strong interest in technology, creativity, and self-expression.
+        I enjoy exploring new ideas and taking part in projects that challenge and inspire me.
         Outside academics, I like spending time on hobbies like photography, drawing, and other creative pursuits.
       </p>
     </div>
-     
+
     <!-- Right Blog Section -->
     <div class="blog-links">
       <h2>My Blogs</h2>
       <ul>
 
-         <li>
-        <a href="#">Joinado</a>
-        <p class="date">June 19, 2025 – 2025</p>
-    </li>
-         <li>
-      <a href="Studyspace.html">Study Space</a>
-      <p class="date">May 20, 2025 –  24, May 2025</p>
-       
-    </li>
-    
-   
+        <!-- 3D Portfolio Blog -->
+        <li class="blog-item">
+          <h3>3D Portfolio – Vending Machine Experience</h3>
+          <div class="blog-buttons">
+            <a href="https://harrypotteris.github.io/3d-portfolio/" target="_blank" class="live-button">Live Demo</a>
+            <a href="https://github.com/harrypotteris/3d-portfolio" target="_blank" class="github-button">GitHub</a>
+          </div>
+          <p class="date">2025</p>
+
+          <div class="blog-content">
+            <img src="images/3Dport.png" alt="3D Portfolio Preview" />
+            <p>
+              To use this vending machine, click on the number of the item you want.
+              The item will drop and appear in front of you. When clicked, it opens
+              the corresponding page. Enjoy exploring!
+            </p>
+          </div>
+        </li>
+
+              <!-- Study Space Blog -->
+      <li class="blog-item">
+        <h3>
+          <a href="https://harrypotteris.github.io/Portfolio/Studyspace.html" target="_blank" style="text-decoration: none; color: inherit;">
+            Study Space
+          </a>
+        </h3>
+        <div class="blog-buttons">
+          <a href="https://harrypotteris.github.io/My_Study_Space/" target="_blank" class="live-button">Live Demo</a>
+          <a href="https://github.com/harrypotteris/My_Study_Space" target="_blank" class="github-button">GitHub</a>
+        </div>
+        <p class="date">May 20, 2025 – 24 May 2025</p>
+
+        <div class="blog-content">
+          <p>
+            Study Space is a collaborative platform for students to organize notes, share resources,
+            and enhance learning experiences.
+          </p>
+        </div>
+      </li>
+
+        <!-- Joinado Blog -->
+        <li class="blog-item">
+          <h3>Joinado</h3>
+          <div class="blog-buttons">
+            <a href="https://harrypotteris.github.io/project_group_finder/" target="_blank" class="live-button">Live Demo</a>
+            <a href="https://github.com/harrypotteris/project_group_finder" target="_blank" class="github-button">GitHub</a>
+          </div>
+          <p class="date">June 19, 2025 – 2025</p>
+
+          <div class="blog-content">
+            <p>
+              Joinado is a project group finder platform that helps students form and manage study groups efficiently.
+            </p>
+          </div>
+        </li>
+
       </ul>
     </div>
   </div>
-   <!-- Contact Section -->
-   <div class="contact-section" id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:charithagattu248@example.com">charithagattu248@example.com</a></p>
-  <p>College Email: <a href="mailto:b23ee1021@iitj.ac.in">b23ee1021@iitj.ac.in</a></p>
-  <p>Phone: +91 99085 91319</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/charitha-gattu" target="_blank">linkedin.com/in/charitha-gattu</a></p>
-  <p>GitHub: <a href="https://github.com/harrypotteris" target="_blank">github.com/harrypotteris</a></p>
-</div>
 
+  <!-- Contact Section -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:charithagattu248@example.com">charithagattu248@example.com</a></p>
+    <p>College Email: <a href="mailto:b23ee1021@iitj.ac.in">b23ee1021@iitj.ac.in</a></p>
+    <p>Phone: +91 99085 91319</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/charitha-gattu" target="_blank">linkedin.com/in/charitha-gattu</a></p>
+    <p>GitHub: <a href="https://github.com/harrypotteris" target="_blank">github.com/harrypotteris</a></p>
+  </div>
 
-  <script src="script.js"></script>
+  <script>
+    const blogItems = document.querySelectorAll('.blog-item');
+
+    blogItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
