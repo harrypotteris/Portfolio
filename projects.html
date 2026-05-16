@@ -1,72 +1,31 @@
-<ul class="project-list" id="projectList">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Charitha Gattu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<li class="project-item">
-  <div class="project-header">
-    <a href="#">Visual Companion</a>
-    <p class="date">B.Tech 3rd Year, 2026</p>
-  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="photographs.html">Photographs</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="project-details">
-    <p>
-      AI-powered visual assistant using computer vision to analyze and
-      understand real-world scenes.
-    </p>
+  <div class="main">
+    <div class="container">
+  <h1>Projects</h1>
 
-    <p><strong>Tools:</strong> Python, OpenCV, Deep Learning</p>
-
-    <p>
-      <strong>Live Demo:</strong>
-      <a href="https://visual-companion.vercel.app/" target="_blank">
-        Open Website
-      </a>
-    </p>
-
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/harrypotteris/visual-companion" target="_blank">
-        View Project
-      </a>
-    </p>
-
-    <p><strong>Course:Ethical Issues with AI</strong> Group Project</p>
-  </div>
-</li>
-
-<li class="project-item">
-  <div class="project-header">
-    <a href="#">Enhanced Underwater Image Restoration</a>
-    <p class="date">B.Tech 3rd Year, 2026</p>
-  </div>
-
-  <div class="project-details">
-    <p>
-      Developed an enhanced underwater image restoration pipeline using
-      Sea-Thru preprocessing, FUnIE-GAN enhancement, and optional
-      Real-ESRGAN super-resolution for improved underwater image quality.
-    </p>
-
-    <p>
-      The system performs adaptive white balancing, depth estimation,
-      attenuation correction, GAN-based enhancement, and 4× image upscaling.
-    </p>
-
-    <p>
-      <strong>Tools:</strong> Python, OpenCV, PyTorch, FUnIE-GAN,
-      Real-ESRGAN
-    </p>
-
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/harrypotteris/underwater-image-restoration_cv" target="_blank">
-        View Project
-      </a>
-    </p>
-
-    <p><strong>Course:</strong> Computer Vision / Group Project</p>
-  </div>
-</li>
-
-<li class="project-item">
+  <ul class="project-list" id="projectList">
+    <li class="project-item">
   <div class="project-header">
     <a href="#">Fruits Classifier</a>
     <p class="date">B.Tech 2nd Year, 2025</p>
@@ -160,4 +119,25 @@
   </div>
 </li>
 
-</ul>
+    <!-- Add more projects here -->
+  </ul>
+
+  <div class="pagination">
+    <button id="prevBtn" style="display: none;">Previous</button>
+    <button id="nextBtn">Next</button>
+  </div>
+</div>
+
+
+    <!-- Contact Section -->
+   <div class="contact-section" id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:charithagattu248@example.com">charithagattu248@example.com</a></p>
+  <p>College Email: <a href="mailto:b23ee1021@iitj.ac.in">b23ee1021@iitj.ac.in</a></p>
+  <p>Phone: +91 99085 91319</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/charitha-gattu" target="_blank">linkedin.com/in/charitha-gattu</a></p>
+  <p>GitHub: <a href="https://github.com/harrypotteris" target="_blank">github.com/harrypotteris</a></p>
+ </div>
+  <script src="script.js"></script>
+</body>
+</html>
